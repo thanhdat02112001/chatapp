@@ -12,6 +12,13 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public static function boot() {
+		parent::boot();
+		self::creating(function ($my_model) {
+			$my_model->color = RandomColor::generate();
+		});
+	}
+
     /**
      * The attributes that are mass assignable.
      *

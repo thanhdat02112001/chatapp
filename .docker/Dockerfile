@@ -24,6 +24,9 @@ RUN docker-php-ext-install pdo pdo_mysql pcntl
 
 RUN docker-php-ext-enable pdo_mysql
 
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 # Remove Cache
 RUN rm -rf /var/cache/apk/*
 
