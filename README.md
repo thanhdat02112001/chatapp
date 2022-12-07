@@ -1,2 +1,3 @@
 # chatapp
-realtime chat app using laravel and vuejs
+Realtime chat app with
+`laravel`, `vuejs`,  `laravel-echo`, `redis`, `socketio`
